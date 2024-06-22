@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #1d4ed8;
+    --text-color: #f5f5f4;
+    --bg-color: #0c0a09;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 2rem);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Back to Top Starts */
+.btn-backtotops {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 200;
+
+}
+
+/* Back to Top Ends */
+
+/* Stick Note Starts */
+.sticknotes a {
+    width: 120px;
+    background-color: steelblue;
+    text-align: end;
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: #fff;
+
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+
+    position: absolute;
+    left: -110px;
+    z-index: 100;
+
+    transition: left 0.5s;
+}
+
+.sticknotes a:hover {
+    left: 0px;
+}
+
+.sticknotes .explore {
+    top: 200px;
+    background-color: var(--main-color);
+}
+
+.sticknotes .latest {
+    top: 260px;
+    background-color: #052e16;
+}
+
+.sticknotes .goat {
+    top: 320px;
+    background-color: #e11d48;
+}
+
+/* Stick Note Ends */
+
+/* Header Starts */
+/* Navbar Starts */
+.navbar {
+    background: var(--main-color);
+    padding: 20px 30px;
+
+    transition: all 0.7s;
+}
+
+.navmenus {
+    background: #1d4ed8;
+    padding: 5px 30px;
+}
+
+.menuitems {
+    color: #f4f4f4;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color 0.5s;
+}
+
+.menuitems:hover {
+    color: skyblue;
+}
+
+.actives {
+    color: skyblue;
+}
+
+/* Banner Starts */
+.banners {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.bannerheaders {
+    animation: bananis;
+    animation-duration: 2s;
+}
+
+.bannerparagraphs {
+    animation: bananis;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bananis {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Banner Ends */
+/* Navbar Ends */
+@media screen and (max-width:768px) {
+    .row .col-lg-2 {
+        width: 30%;
+        margin: auto;
+    }
+}
+
+.card .card-body .card-text {
+    font-size: 0.75rem;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.home .card,
+.anime .card,
+.search .card,
+.aboutUs .card {
+    margin-bottom: 2rem;
+}
+
+/* Footer Starts */
+footer {
+    background-color: #1c1917;
+}
+
+.footerlinks {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: all 0.3s;
+}
+
+.footerlinks:hover {
+    color: orange;
+    border-bottom: 1px solid orange;
+    letter-spacing: 1px;
+}
+
+#copyright {
+    font-size: 0.70rem;
+}
+
+#recaptcha-terms {
+    font-size: 0.60rem;
+}
+
+
+/* Footer Ends */
+
+/* Search Starts */
+.search-bar {
+    margin-top: 100px;
+}
+
+.search-input {
+    width: 60%;
+    background-color: #1c1917;
+    border: 1px solid #052e16;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.search-input:focus {
+    outline: 1px solid var(--main-color);
+}
+
+.search-bar .btn:hover {
+    background-color: var(--main-color);
+}
+
+.genre-item {
+    font-size: 0.75rem;
+    color: #7dd3fc;
+    transition: all 0.3s;
+
+    cursor: pointer;
+}
+
+.genre-item:hover {
+    color: orange;
+    text-decoration: underline orange;
+    letter-spacing: 0.5px;
+}
+
+.more {
+    font-size: 0.75rem;
+    color: #7dd3fc;
+    text-decoration: none;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+/* Search Ends */
+
+/* Reviews Starts */
+.reviews {
+    background: url(./assets/img/review-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    width: 70%;
+    padding-top: 100px;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+.reviews .card {
+    background-color: #052e16a2;
+    width: 50%;
+}
+
+.reviews .container .card:nth-of-type(even) {
+    margin-left: auto;
+
+    animation: reviewAniEven;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.reviews .container .card:nth-of-type(odd) {
+    animation: reviewAniOdd;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes reviewAniEven {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes reviewAniOdd {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .reviews {
+        width: 100%;
+    }
+
+    .reviews .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews .container .card {
+        width: 90%;
+    }
+
+    .reviews .container .card:nth-of-type(even) {
+        margin: auto;
+    }
+}
+
+.contacts .inputs {
+    background-color: transparent;
+    color: #fff;
+    border-color: transparent;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+
+    transition: all 0.8s;
+}
+
+.contacts .inputs:focus {
+    box-shadow: none;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.inputs::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.labels {
+    color: #f00;
+    display: block;
+    margin-top: -60px;
+    margin-left: 17px;
+}
+
+.inputs:placeholder-shown+.labels {
+    /* visibility: hidden; */
+    opacity: 0;
+}
+
+.submit-btns {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+
+    transition: all 0.3s;
+}
+
+.submit-btns:hover {
+    background-color: var(--fruit-color);
+    color: #fff;
+}
+
+/* Reviews Ends */
+
+/* About Us Starts */
+.about-us {
+    height: 70vh;
+    background: url(./assets/img/aboutusbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome p,
+.purpose p,
+.setup li,
+.join p {
+    text-align: justify;
+}
+
+.purpose,
+.join {
+    background-color: #1c1917;
+}
+
+.join {
+    width: 100%;
+    margin: auto;
+}
+
+.thanks {
+    width: 80%;
+    margin: auto;
+    padding: 10px 10px 0px;
+
+    display: grid;
+    place-items: center;
+}
+
+/* About Us Ends */
+
+/* Detail Your Name */
+
+#detail {
+    overflow-wrap: 0;
+}
+
+.add {
+    font-size: 0.75rem;
+}
+
+.add .leads {
+    font-size: 0.80rem;
+    text-decoration: underline;
+}
+
+/* Detail Your Name */
